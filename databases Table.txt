@@ -1,0 +1,36 @@
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/db_example
+spring.datasource.username=root
+spring.datasource.password = 1234
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+
+spring.jpa.hibernate.ddl-auto = update
+
+
+
+CREATE TABLE recipes (recipe_id INT NOT NULL,recipe_name VARCHAR(30) NOT NULL,PRIMARY KEY (recipe_id),UNIQUE (recipe_name));
+
+
+CREATE TABLE login_details (user_id VARCHAR(200) NOT NULL,password VARCHAR(200) NOT NULL,Name VARCHAR(200) NOT NULL,Account_number INT NOT NULL,PRIMARY KEY (user_id));
+
+
+
+INSERT INTO recipes (recipe_id, recipe_name) VALUES (1,"Tacos"),(2,"Tomato Soup"),(3,"Grilled Cheese");
+
+
+INSERT INTO login_details (user_id, password, Name, Account_number) VALUES ("W111","W111@1","Ram",111222331),("W12","W112@2","Raj",111222332),("W113","W113@3","Jas",111222333);
+
+
+SELECT * FROM recipes;
+
+
+UPDATE login_details SET user_id = 'W112' where user_name = 'Raj';
+
+
+
+CREATE TABLE Enquiry_details (Account_number INT NOT NULL,Branch_code INT NOT NULL,Account_type VARCHAR(200) NOT NULL,Balance INT NOT NULL,Currency VARCHAR(200) NOT NULL,Status VARCHAR(200) NOT NULL,PRIMARY KEY (Account_number));
+
+
+
+INSERT INTO Enquiry_details (Account_number, Branch_code, Account_type, Balance, Currency, Status) VALUES (111222331,001,"Savings",222331,"INR","Active"),(111222332,001,"Current",112332,"INR","Active"),(111222333,001,"Savings",11,"INR","Closed");
