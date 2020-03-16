@@ -9,14 +9,14 @@ spring.jpa.hibernate.ddl-auto = update
 
 
 
-CREATE TABLE recipes (recipe_id INT NOT NULL,recipe_name VARCHAR(30) NOT NULL,PRIMARY KEY (recipe_id),UNIQUE (recipe_name));
+
 
 
 CREATE TABLE login_details (user_id VARCHAR(200) NOT NULL,password VARCHAR(200) NOT NULL,Name VARCHAR(200) NOT NULL,Account_number INT NOT NULL,PRIMARY KEY (user_id));
 
 
 
-INSERT INTO recipes (recipe_id, recipe_name) VALUES (1,"Tacos"),(2,"Tomato Soup"),(3,"Grilled Cheese");
+
 
 
 INSERT INTO login_details (user_id, password, Name, Account_number) VALUES ("W111","W111@1","Ram",111222331),("W12","W112@2","Raj",111222332),("W113","W113@3","Jas",111222333);
